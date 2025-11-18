@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Zoo Escape Pawzzle · Terms of Use</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: "M PLUS Rounded 1c", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            color: #fdf1d5;
+        }
+
+        .page-bg {
+            position: fixed;
+            inset: 0;
+            background: url("assets/bg-forest.jpeg") center center / cover no-repeat;
+            z-index: -2;
+        }
+
+        .page-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.55);
+            z-index: -1;
+        }
+
+        .page-overlay::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(180deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 25%),
+                linear-gradient(0deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 25%);
+            pointer-events: none;
+        }
+
+        main {
+            position: relative;
+            min-height: 100vh;
+            padding: 40px 16px 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .logo {
+            max-width: 360px;
+            width: 80%;
+            margin-bottom: 24px;
+            filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.5));
+        }
+
+        img {
+            user-select: none;
+            -webkit-user-drag: none;
+        }
+
+        .card {
+            max-width: 720px;
+            background: #efd3a1;
+            border-radius: 32px;
+            padding: 36px;
+            box-shadow:
+                inset 0 0 45px rgba(108, 27, 8, 0.6),
+                inset 0 0 0 8px rgba(158, 65, 30, 0.8),
+                0 16px 34px rgba(0, 0, 0, 0.65);
+            color: #4a1f12;
+            text-align: left;
+        }
+
+        .card h1 {
+            font-size: 2rem;
+            margin-top: 0;
+            margin-bottom: 16px;
+        }
+
+        .card p {
+            line-height: 1.55;
+            margin: 0 0 14px;
+        }
+
+        .card h2 {
+            margin: 24px 0 12px;
+            font-size: 1.35rem;
+        }
+
+        .footer-nav {
+            margin-top: 28px;
+            display: flex;
+            gap: 16px;
+        }
+
+        .footer-nav a {
+            color: #fdf1d5;
+            text-decoration: none;
+        }
+
+        @media (max-width: 640px) {
+            main {
+                padding: 32px 12px;
+            }
+
+            .card {
+                padding: 28px 22px;
+            }
+
+            .card h1 {
+                font-size: 1.7rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-bg"></div>
+    <div class="page-overlay"></div>
+
+    <main>
+        <img src="assets/logo-zoo-escape.png" alt="Zoo Escape Pawzzle" class="logo" />
+
+        <article class="card">
+            <h1>Terms of Use</h1>
+            <p>These Terms and Conditions govern your use of the mobile game "Zoo Escape Tile Match Pet Game" (the
+                "App"),
+                developed by Dmytro Yermolaiev (the "Developer"). By downloading or using the App, you agree to these
+                terms. Please read them carefully.</p>
+
+            <h2>Use of the App</h2>
+            <p>You may not:</p>
+            <ul>
+                <li>Copy, modify, or distribute the App</li>
+                <li>Reverse engineer or attempt to extract the source code</li>
+                <li>Create derivative works based on the App</li>
+                <li>Use any part of the App’s content, assets, trademarks, or code without permission</li>
+            </ul>
+            <p>All graphics, characters, code, animations, and other intellectual property are owned by the Developer
+                unless otherwise stated.</p>
+            <p>The App is intended for entertainment purposes only. The Developer may update, modify, or discontinue
+                the App at any time without prior notice. New features or premium content may be introduced in the
+                future.</p>
+
+            <h2>Third-Party Services</h2>
+            <p>The App uses third-party services to provide core functionality, advertising, and analytics. These
+                include:</p>
+            <ul>
+                <li>Unity – game engine and platform (<a href="https://unity.com/legal/terms-of-service"
+                        target="_blank">Unity Terms</a>)</li>
+                <li>AdMob (Google) – advertising network (<a href="https://policies.google.com/terms"
+                        target="_blank">AdMob Terms</a>)</li>
+                <li>Mixpanel – anonymous in-app analytics (<a href="https://mixpanel.com/legal/terms-of-use/"
+                        target="_blank">Mixpanel Terms</a>)</li>
+                <li>Unity Gaming Services – cloud save, authentication, leaderboards (<a
+                        href="https://unity.com/legal/terms-of-service" target="_blank">UGS Terms</a>)</li>
+            </ul>
+            <p>By using the App, you acknowledge that these third-party services operate under their own Terms &
+                Policies.</p>
+
+            <h2>Internet Connection</h2>
+            <p>Some features of the App require an active internet connection, including but not limited to:</p>
+            <ul>
+                <li>Cloud save</li>
+                <li>Leaderboards</li>
+                <li>Ads display</li>
+                <li>In-app purchases</li>
+            </ul>
+            <p>You are responsible for any data charges from your mobile provider.</p>
+
+            <h2>In-Game User ID</h2>
+            <p>The App generates an anonymous User ID used for game functionality.</p>
+            <p>If you contact support, you may choose to provide this User ID to help the Developer investigate
+                technical issues. Supplying this ID is optional and does not contain personal data.</p>
+
+            <h2>In-App Purchases</h2>
+            <p>Certain features or items may be available as in-app purchases. All purchases are processed securely by
+                Google Play or the Apple App Store. The Developer does not have access to your payment information.</p>
+
+            <h2>App Updates and Termination</h2>
+            <p>The App may receive updates that enhance gameplay, fix issues, or change functionality. You agree to
+                accept these updates to continue using the App.</p>
+            <p>The Developer reserves the right to suspend or terminate access to the App at any time without prior
+                notice. Upon termination, all rights granted to you under these Terms will cease.</p>
+
+            <h2>Changes to These Terms</h2>
+            <p>These Terms & Conditions may be updated from time to time. Continued use of the App after changes are
+                published constitutes acceptance of the new terms. The latest version will always be available on this
+                page.</p>
+
+            <h2>Contact</h2>
+            <p>If you have any questions or need support, please contact:</p>
+            <p>📧 <a href="mailto:zooescape.pawzzle@gmail.com">zooescape.pawzzle@gmail.com</a></p>
+        </article>
+
+        <nav class="footer-nav">
+            <a href="index.html">Home</a>
+            <a href="privacy.html">Privacy Policy</a>
+        </nav>
+    </main>
+</body>
+
+</html>
