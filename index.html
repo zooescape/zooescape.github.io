@@ -6,7 +6,6 @@
     <title>Zoo Escape Pawzzle</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Meta description for SEO -->
     <meta name="description"
         content="Zoo Escape Pawzzle Zoo Escape Tile Match Pet Game is a cute and relaxing puzzle game where you match three tiles to clear the board, earn Paw Keys, and rescue dozens of adorable animals from their cages!" />
 
@@ -17,14 +16,13 @@
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <link rel="manifest" href="site.webmanifest" />
 
-    <!-- Google Font (similar to in-game style) -->
+    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
     <link rel="stylesheet" href="style.css" />
 
     <style>
-        /* Base styles */
         *,
         *::before,
         *::after {
@@ -39,8 +37,7 @@
         }
 
         body {
-            font-family: "M PLUS Rounded 1c", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-                sans-serif;
+            font-family: "M PLUS Rounded 1c", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
             color: #ffffff;
             overflow-x: hidden;
         }
@@ -73,7 +70,6 @@
             pointer-events: none;
         }
 
-        /* Main layout container */
         .page-wrapper {
             position: relative;
             min-height: 100vh;
@@ -98,26 +94,35 @@
             filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.5));
         }
 
-        /* GALLERY */
+        /* TRAILER (16:9 player) */
         .gallery {
             display: flex;
             justify-content: center;
+            align-items: center;
             padding: 12px;
-            margin: -40px 40px -30px 0px;
+            margin: -10px auto 20px;
             width: 100%;
         }
 
-        .gallery-card {
-            max-width: 880px;
-            width: min(90vw, 880px);
-            perspective: 1400px;
+        .gallery-card--video {
+            width: min(82vw, 760px);
+            margin: 0 auto;
         }
 
-        .gallery-card img {
+        .video-embed {
             width: 100%;
+            aspect-ratio: 16 / 9;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 16px 34px rgba(0, 0, 0, 0.65);
+            background: rgba(0, 0, 0, 0.18);
+        }
+
+        .video-embed iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
             display: block;
-            transform-origin: center;
-            animation: galleryTilt 7s ease-in-out infinite;
         }
 
         /* DOWNLOAD BUTTONS */
@@ -127,7 +132,7 @@
             justify-content: center;
             gap: 16px;
             flex-wrap: nowrap;
-            margin-bottom: 28px;
+            margin-bottom: 16px;
         }
 
         .store-btn img {
@@ -175,21 +180,9 @@
             animation: keyFloat 3.5s ease-in-out infinite;
         }
 
-        img {
-            user-select: none;
-            -webkit-user-drag: none;
-        }
-
         .description-card__content {
             font-size: 1.1rem;
             line-height: 1.55;
-        }
-
-        .description-card__content h1 {
-            margin: 0 0 12px;
-            font-size: 1.9rem;
-            color: #5c1e12;
-            font-weight: 600;
         }
 
         .description-card__content p {
@@ -245,22 +238,17 @@
             }
 
             .gallery {
-                margin: -20px auto 0;
+                margin: -10px auto 20px;
                 padding: 8px;
             }
 
-            .gallery-card {
-                width: min(110vw, 836px);
-                margin: 0 auto;
-            }
-
-            .gallery-card img {
-                animation-duration: 6s;
+            .gallery-card--video {
+                width: min(92vw, 720px);
             }
 
             .downloads {
                 gap: 12px;
-                margin-bottom: 20px;
+                margin-bottom: 4px;
             }
 
             .description-card {
@@ -287,17 +275,17 @@
             }
 
             .gallery {
-                margin: 0 auto 8px;
+                margin: -10px auto 20px;
                 padding: 6px;
             }
 
-            .gallery-card {
-                width: min(132vw, 682px);
-                margin: 0 -17vw -20px -18vw;
+            .gallery-card--video {
+                width: min(94vw, 640px);
             }
 
-            .gallery-card img {
-                animation-duration: 5.5s;
+            .downloads {
+                gap: 12px;
+                margin-bottom: 14px;
             }
 
             .description-card {
@@ -316,24 +304,6 @@
 
             .description-card__content {
                 font-size: 1rem;
-            }
-
-            .description-card__content h1 {
-                font-size: 1.6rem;
-            }
-        }
-
-        @keyframes galleryTilt {
-            0% {
-                transform: rotateY(8deg) translateZ(0);
-            }
-
-            50% {
-                transform: rotateY(-8deg) translateZ(15px);
-            }
-
-            100% {
-                transform: rotateY(8deg) translateZ(0);
             }
         }
 
@@ -362,21 +332,28 @@
             <img src="assets/logo-zoo-escape.png" alt="Zoo Escape Pawzzle" class="hero-logo" />
         </header>
 
-        <!-- SCREENSHOTS / CARDS -->
+        <!-- TRAILER (YouTube) -->
         <section class="gallery">
-            <div class="gallery-card gallery-card--gameplay">
-                <img src="assets/card-gameplay.png" alt="Gameplay screenshot" />
+            <div class="gallery-card--video">
+                <div class="video-embed" aria-label="Zoo Escape Pawzzle Trailer">
+                    <iframe
+                        src="https://www.youtube.com/embed/embsye3q9oI?autoplay=1&mute=1&playsinline=1&loop=1&playlist=embsye3q9oI&controls=1&modestbranding=1&rel=0"
+                        title="Zoo Escape Pawzzle Trailer"
+                        allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen
+                        referrerpolicy="strict-origin-when-cross-origin">
+                    </iframe>
+                </div>
             </div>
         </section>
 
         <!-- DOWNLOAD BUTTONS -->
         <section class="downloads">
             <a href="https://play.google.com/store/apps/details?id=com.DCT.ZEP" class="store-btn"
-                aria-label="Get it on Google Play" target="_blank">
+                aria-label="Get it on Google Play" target="_blank" rel="noopener">
                 <img src="assets/google-play-badge.png" alt="Get it on Google Play" />
             </a>
             <a href="https://apps.apple.com/us/app/zoo-escape-tile-match-pet-game/id6755091754" class="store-btn"
-                aria-label="Get it on the App Store" target="_blank">
+                aria-label="Get it on the App Store" target="_blank" rel="noopener">
                 <img src="assets/app-store-badge.png" alt="Get it on the App Store" />
             </a>
         </section>
